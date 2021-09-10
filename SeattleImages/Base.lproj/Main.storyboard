@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,25 +13,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeattleImages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-bG-dcF">
-                                <rect key="frame" x="138" y="72" width="122" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-bG-dcF">
+                                <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="byd-17-6Eh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Next Picture"/>
                                 <connections>
                                     <action selector="showMeNextRandomPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbK-Da-an2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Seattle1" translatesAutoresizingMaskIntoConstraints="NO" id="5gw-4y-MYE">
-                                <rect key="frame" x="39" y="136" width="321" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Seattle1" translatesAutoresizingMaskIntoConstraints="NO" id="5gw-4y-MYE">
+                                <rect key="frame" x="5" y="100" width="404" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Wrw-M4-2D8"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y4G-bG-dcF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0Zn-dy-OLP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gw-4y-MYE" secondAttribute="trailing" constant="5" id="F1H-ei-xCs"/>
+                            <constraint firstItem="5gw-4y-MYE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Nst-tH-J31"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y4G-bG-dcF" secondAttribute="trailing" constant="20" id="PTJ-Pf-G46"/>
+                            <constraint firstItem="5gw-4y-MYE" firstAttribute="top" secondItem="y4G-bG-dcF" secondAttribute="bottom" constant="30" id="Sqt-ae-xoi"/>
+                            <constraint firstItem="y4G-bG-dcF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aVT-WM-sBr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imgView" destination="5gw-4y-MYE" id="vIK-Pg-aKO"/>
@@ -39,11 +51,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="135" y="91.25"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Seattle1" width="182.5" height="121.5"/>
+        <image name="Seattle1" width="182.33332824707031" height="121.66666412353516"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
